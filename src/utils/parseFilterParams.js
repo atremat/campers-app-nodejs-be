@@ -1,29 +1,37 @@
-const parseContactType = (contactType) => {
-  const isString = typeof contactType === 'string';
+// const parseContactType = (contactType) => {
+//   const isString = typeof contactType === 'string';
+
+//   if (!isString) return;
+
+//   const isContactType = (contactType) =>
+//     ['work', 'home', 'personal'].includes(contactType);
+
+//   if (isContactType(contactType)) return contactType;
+// };
+
+// const parseIsFavourite = (favourite) => {
+//   if (favourite === 'true' || favourite === 'false') {
+//     return favourite;
+//   }
+// };
+const parseLocation = (location) => {
+  const isString = typeof location === 'string';
 
   if (!isString) return;
 
-  const isContactType = (contactType) =>
-    ['work', 'home', 'personal'].includes(contactType);
-
-  if (isContactType(contactType)) return contactType;
-};
-
-const parseIsFavourite = (favourite) => {
-  if (favourite === 'true' || favourite === 'false') {
-    return favourite;
-  }
+  return location;
 };
 
 export const parseFilterParams = (query) => {
-  const { type, isFavourite } = query;
+  const { location } = query;
+  // const { location, vehicleType, AC, shower, TV, kitchen, automatic } = query;
+  // const { type, isFavourite } = query;
 
-  const parsedContactType = parseContactType(type);
+  const parsedLocation = parseLocation(location);
 
-  const parsedIsFavourite = parseIsFavourite(isFavourite);
+  // const parsedIsFavourite = parseIsFavourite(isFavourite);
 
   return {
-    type: parsedContactType,
-    isFavourite: parsedIsFavourite,
+    location: parsedLocation,
   };
 };
