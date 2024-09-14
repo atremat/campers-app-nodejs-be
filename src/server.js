@@ -50,8 +50,12 @@ export const setupServer = () => {
     }),
   );
 
+  app.get('/', (req, res) => {
+    res.send('Welcome to Campers App API');
+  });
+
   app.use('/campers', campersRouter);
-  // app.use('/auth', authRouter);
+
   app.use('/api-docs', swaggerDocs());
 
   app.use(notFoundHandler);
