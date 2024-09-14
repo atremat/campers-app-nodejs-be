@@ -1,0 +1,59 @@
+type: object
+required:
+  - airConditioner
+  - bathroom
+  - kitchen
+  - beds
+  - TV
+  - CD
+  - radio
+  - shower
+  - toilet
+  - freezer
+  - hob
+  - microwave
+  - gas
+  - water
+properties:
+  airConditioner:
+    type: integer
+    example: 1
+  bathroom:
+    type: integer
+    example: 1
+  kitchen:
+    type: integer
+    example: 1
+  beds:
+    type: integer
+    example: 3
+  TV:
+    type: integer
+    example: 1
+  CD:
+    type: integer
+    example: 1
+  radio:
+    type: integer
+    example: 1
+  shower:
+    type: integer
+    example: 1
+  toilet:
+    type: integer
+    example: 1
+  freezer:
+    type: integer
+    example: 1
+  hob:
+    type: integer
+    example: 3
+  microwave:
+    type: integer
+    example: 1
+  gas:
+    type: string
+    example: '35kg'
+  water:
+    type: string
+    example: '151l'

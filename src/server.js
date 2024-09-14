@@ -2,11 +2,10 @@ import express from 'express';
 import cors from 'cors';
 import pino from 'pino-http';
 import { env } from './utils/env.js';
-// import authRouter from './routers/auth.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import cookieParser from 'cookie-parser';
-// import { swaggerDocs } from './middlewares/swaggerDocs.js';
+import { swaggerDocs } from './middlewares/swaggerDocs.js';
 import campersRouter from './routers/campers.js';
 const PORT = Number(env('PORT', 3000));
 
@@ -17,6 +16,7 @@ const allowedOrigins = [
   'http://localhost:3000',
 
   //деплой-продакшен
+  'https://campersland.netlify.app',
 ];
 
 export const setupServer = () => {
@@ -52,7 +52,7 @@ export const setupServer = () => {
 
   app.use('/campers', campersRouter);
   // app.use('/auth', authRouter);
-  // app.use('/api-docs', swaggerDocs());
+  app.use('/api-docs', swaggerDocs());
 
   app.use(notFoundHandler);
 

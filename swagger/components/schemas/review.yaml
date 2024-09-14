@@ -1,0 +1,17 @@
+type: object
+required:
+  - reviewer_name
+  - reviewer_rating
+  - comment
+properties:
+  reviewer_name:
+    type: string
+    example: 'Alice'
+  reviewer_rating:
+    type: integer
+    minimum: 0
+    maximum: 5
+    example: 5
+  comment:
+    type: string
+    example: 'Exceptional RV! Highly recommended!'

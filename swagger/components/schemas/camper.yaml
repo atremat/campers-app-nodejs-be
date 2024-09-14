@@ -1,0 +1,106 @@
+type: object
+required:
+  - name
+  - price
+  - rating
+  - location
+  - adults
+  - children
+  - engine
+  - transmission
+  - form
+  - length
+  - width
+  - height
+  - tank
+  - consumption
+  - description
+  - details
+  - gallery
+  - reviews
+properties:
+  _id:
+    description: "Contact's id"
+    type: string
+    example: 665c7107b4570a0fe55ea884
+  name:
+    description: "Contact's name"
+    type: string
+    example: 'Yulia Shevchenko'
+  price:
+    description: "Camper's price"
+    type: number
+    example: '10000'
+  rating:
+    description: 'Rating of camper'
+    type: number
+    minimum: 0
+    maximum: 5
+    example: 4
+  location:
+    description: 'Location of camper'
+    type: string
+    example: 'Ukraine, Kyiv'
+  adults:
+    description: 'Number of seats for adults'
+    type: integer
+    example: 2
+  children:
+    description: 'Number of seats for children'
+    type: integer
+    example: 1
+  engine:
+    description: "Type of engine's fuels"
+    type: string
+    enum: ['petrol', 'diesel', 'hybrid', 'electricity']
+    example: 'petrol'
+  transmission:
+    description: 'Type of transmission'
+    type: string
+    enum: ['automatic', 'mechanic']
+    example: 'automatic'
+  form:
+    description: 'Form of camper'
+    type: string
+    enum: ['alcove', 'fullyIntegrated', 'panelTruck']
+    example: 'alcove'
+  length:
+    description: 'Length of camper'
+    type: string
+    example: '5.4m'
+  width:
+    description: 'Width of camper'
+    type: string
+    example: '2.01m'
+  height:
+    description: 'Height of camper'
+    type: string
+    example: '2.05m'
+  tank:
+    description: 'Amount of fuel in liters'
+    type: string
+    example: '208l'
+  consumption:
+    description: 'Amount of liters per kilometer'
+    type: string
+    example: '30l/100km'
+  description:
+    description: 'Descriptionf of camper'
+    type: string
+    example: 'Embark on an unforgettable journey with the Road Bear C 23-25, an epitome of comfort and convenience on wheels.'
+  details:
+    $ref: './details.yaml'
+  gallery:
+    type: array
+    items:
+      type: string
+    example:
+      [
+        'https://ftp.goit.study/img/campers-test-task/1-1.webp',
+        'https://ftp.goit.study/img/campers-test-task/1-2.webp',
+        'https://ftp.goit.study/img/campers-test-task/1-3.webp',
+      ]
+  reviews:
+    type: array
+    items:
+      $ref: 'review.yaml'

@@ -1,0 +1,18 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Campers app
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  description: This is a documentation of students app
+tags:
+  - name: Campers
+    description: Operations with campers.
+servers:
+  - url: https://campersland.netlify.app
+  - url: http://localhost:3000
+paths:
+  /campers:
+    get:
+      $ref: '../swagger/paths/campers/get.yaml'
