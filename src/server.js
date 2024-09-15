@@ -17,6 +17,7 @@ const allowedOrigins = [
 
   //деплой-продакшен
   'https://campersland.netlify.app',
+  'https://campers-app-nodejs-be.onrender.com',
 ];
 
 export const setupServer = () => {

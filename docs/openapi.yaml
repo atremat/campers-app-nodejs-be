@@ -10,7 +10,7 @@ tags:
   - name: Campers
     description: Operations with campers.
 servers:
-  - url: https://campersland.netlify.app
+  - url: https://campers-app-nodejs-be.onrender.com
   - url: http://localhost:3000
 paths:
   /campers:
